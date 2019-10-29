@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
 
-CHROME=google-chrome
+CHROME=vivaldi # https://vivaldi.com/download/
 URL=http://www.deeplearningbook.org/contents
 
-htmlToPdf () { $CHROME --headless --print-to-pdf=$1 $2; }
+htmlToPdf () { $CHROME --headless --disable-gpu --print-to-pdf=$1 $2; }
 
 # list of PDF and HTML files
 # update from http://www.deeplearningbook.org/
@@ -35,4 +35,4 @@ htmlToPdf 18_partition.pdf 			$URL/partition.html
 htmlToPdf 19_inference.pdf 			$URL/inference.html
 htmlToPdf 20_generative_models.pdf 	$URL/generative_models.html
 htmlToPdf 99.1_bib.pdf 				$URL/bib.html
-htmlToPdf 99.2_index.pdf 			$URL/index-.htm
+htmlToPdf 99.2_index.pdf 			$URL/index-.html
